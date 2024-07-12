@@ -1,6 +1,7 @@
 set nowrap
 set background=dark
 set autoindent
+set noruler
 set noexpandtab
 set tabstop=8
 set shiftwidth=8

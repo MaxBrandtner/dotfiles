@@ -6,4 +6,6 @@ cp -R .config/ $HOME
 cp .tmux.conf $HOME
 cp .zshrc $HOME
 
+tmux source $HOME/.tmux.conf
+
 cd "$initial_dir"

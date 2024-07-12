@@ -5,6 +5,7 @@ set noruler
 set noexpandtab
 set tabstop=8
 set shiftwidth=8
+set scrolloff=8 
 set guicursor=n-v-c-i-ci-ve:ver25
 colorscheme zaibatsu
 hi! Normal ctermbg=NONE guibg=NONE

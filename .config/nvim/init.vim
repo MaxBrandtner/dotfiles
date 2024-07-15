@@ -11,5 +11,6 @@ colorscheme zaibatsu
 hi! Normal ctermbg=NONE guibg=NONE
 hi! EndOfBuffer guibg=NONE ctermbg=NONE
 command! E Explore
+command! W w
 nnoremap f o<Esc>0"_D
 autocmd Filetype python setlocal noexpandtab autoindent tabstop=8 shiftwidth=8

@@ -4,9 +4,9 @@ cd "$(dirname "$(realpath "$BASH_SOURCE")")"
 
 if [ -z "$1" ]
 then
-	echo "Usage: ./install.sh [...]"   >/dev/stderr
-	echo "	--conf	Update dotfiles"   >/dev/stderr
-	echo "	--nix	Update nix-config" >/dev/stderr
+	echo "Usage: ./install.sh [...]"     >/dev/stderr
+	echo "  --conf    Update dotfiles"   >/dev/stderr
+	echo "  --nix     Update nix-config" >/dev/stderr
 	exit 1
 fi
 

@@ -1,4 +1,3 @@
-#!/bin/bash
 initial_dir=$(pwd)
 cd "$(dirname "$(realpath "$BASH_SOURCE")")"
 

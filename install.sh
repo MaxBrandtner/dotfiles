@@ -21,7 +21,7 @@ fi
 
 if [ "$1" == "--nix" ]
 then
-	if [ "$(whomai)" != "root" ]
+	if [ "$(whoami)" != "root" ]
 	then
 		echo "Must be run as root to set nix config" >/dev/stderr
 		exit 1

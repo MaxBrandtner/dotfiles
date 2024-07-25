@@ -115,16 +115,25 @@
 			isNormalUser = true;
 			extraGroups = [ "wheel" "sudo" "kvm" "libvirtd" ];
 			packages = with pkgs; [
-				 flatpak
-				 gnome.gnome-terminal
-				 gnome.nautilus
-				 gnome.file-roller
-				 gnome.gnome-system-monitor
-				 gnome.gnome-calculator
-				 gnome.gnome-calendar
-				 gnome.gnome-tweaks
-				 gh
-				 antimicrox
+				flatpak
+				gnome.gnome-terminal
+				gnome.nautilus
+				gnome.file-roller
+				gnome.gnome-system-monitor
+				gnome.gnome-calculator
+				gnome.gnome-calendar
+				gnome.gnome-tweaks
+				gh
+				antimicrox
+				meson
+				ninja
+				clang
+				pkg-config
+				curlpp
+				curlFull
+				jq
+				pcre2
+				cmake
 			];
 		};
 	};

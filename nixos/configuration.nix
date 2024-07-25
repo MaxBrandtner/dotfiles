@@ -13,6 +13,9 @@
 			timeout = 0;
 			grub.timeoutStyle = "hidden";
 			efi.canTouchEfiVariables = true;
+			efi.efiSysMountPoint = "/boot/EFI";
+			grub.efiSupport = true;
+			grub.device = "nodev";
 		};
 		
 		kernelParams = ["quiet" "amd_iommu=on" "iommu=pt"];
@@ -53,8 +56,8 @@
 			displayManager.gdm.enable = true;
 			desktopManager.gnome.enable = true;
 			videoDrivers = ["nvidia"];
-			layout = "us";
-			xkbVariant = "workman-intl";
+			xkb.layout = "us";
+			xkb.variant = "workman-intl";
 		};
 
 		gnome.core-utilities.enable = false;
@@ -84,6 +87,7 @@
 	programs = {
 		dconf.enable = true;
 		virt-manager.enable = true;
+		zsh.enable = true;
 	};
 
 	virtualisation = {
@@ -107,6 +111,7 @@
 
 	users.users = {
 		max = {
+			shell = pkgs.zsh;
 			isNormalUser = true;
 			extraGroups = [ "wheel" "sudo" "kvm" "libvirtd" ];
 			packages = with pkgs; [
@@ -118,13 +123,17 @@
 				 gnome.gnome-calculator
 				 gnome.gnome-calendar
 				 gnome.gnome-tweaks
+				 gh
+				 antimicrox
 			];
 		};
 	};
 
 
 	environment.systemPackages = with pkgs;[
-		vim
+		neovim
+		zsh
+		git
 		tmux
 		gnome.gdm
 		gnome.gnome-shell

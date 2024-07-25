@@ -7,7 +7,7 @@ set tabstop=8
 set shiftwidth=8
 set scrolloff=8 
 set guicursor=n-v-c-i-ci-ve:ver25
-colorscheme zaibatsu
+source $HOME/.config/nvim/themes/zaibatsu.vim
 hi! Normal ctermbg=NONE guibg=NONE
 hi! EndOfBuffer guibg=NONE ctermbg=NONE
 command! E Explore

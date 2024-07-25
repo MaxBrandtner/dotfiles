@@ -1,8 +1,7 @@
-#!/bin/bash
 initial_dir=$(pwd)
 cd "$(dirname "$(realpath "$BASH_SOURCE")")"
 
-if [ -z "$1" ]
+if [ -z "$1" ] || ([ "$1" != "--conf" ] && [ "$1" != "--nix" ])
 then
 	echo "Usage: ./install.sh [...]"     >/dev/stderr
 	echo "  --conf    Update dotfiles"   >/dev/stderr

@@ -12,6 +12,7 @@ hi! Normal ctermbg=NONE guibg=NONE
 hi! EndOfBuffer guibg=NONE ctermbg=NONE
 command! E Explore
 command! W w
+command! ccf ClangFormat
 nnoremap f o<Esc>0"_D
 autocmd Filetype python setlocal noexpandtab autoindent tabstop=8 shiftwidth=8
 autocmd Filetype markdown setlocal wrap linebreak expandtab autoindent tabstop=4 shiftwidth=4

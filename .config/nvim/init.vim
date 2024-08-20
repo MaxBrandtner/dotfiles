@@ -7,11 +7,14 @@ set tabstop=8
 set shiftwidth=8
 set scrolloff=8 
 set nu
+set cursorline
 set guicursor=n-v-c-i-ci-ve:ver25
 source $HOME/.config/nvim/themes/zaibatsu.vim
 hi! Normal ctermbg=NONE guibg=NONE
 hi! EndOfBuffer guibg=NONE ctermbg=NONE
-hi! LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+" hi! LineNr term=bold cterm=NONE ctermfg=DarkGrey ctermbg=NONE gui=NONE guifg=DarkGrey guibg=NONE
+hi! LineNr guifg=#525252 guibg=NONE gui=NONE cterm=NONE
+hi! CursorLine guifg=NONE guibg=#272727 gui=NONE cterm=NONE
 command! E Explore
 command! W w
 nnoremap f o<Esc>0"_D

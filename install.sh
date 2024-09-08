@@ -14,6 +14,7 @@ then
 	cp -R .config/ $HOME
 	cp .tmux.conf $HOME
 	cp .zshrc $HOME
+	cp -R .moc/ $HOME
 
 	tmux source $HOME/.tmux.conf >/dev/null 2>&1
 

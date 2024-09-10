@@ -1,7 +1,9 @@
-initial_dir=$(pwd)
-cd "$(dirname "$(realpath "$BASH_SOURCE")")"
+#!/bin/sh
 
-if [ -z "$1" ] || ([ "$1" != "--conf" ] && [ "$1" != "--nix" ])
+initial_dir=$(pwd)
+cd "$(dirname "$(realpath "$0")")" || exit 1
+
+if [ "$1" != "--conf" ] && [ "$1" != "--nix" ]
 then
 	echo "Usage: ./install.sh [...]"     >/dev/stderr
 	echo "  --conf    Update dotfiles"   >/dev/stderr
@@ -9,18 +11,18 @@ then
 	exit 1
 fi
 
-if [ "$1" == "--conf" ]
+if [ "$1" = "--conf" ]
 then
-	cp -R .config/ $HOME
-	cp .tmux.conf $HOME
-	cp .zshrc $HOME
-	cp -R .moc/ $HOME
+	cp -R .config/ "$HOME"
+	cp .tmux.conf "$HOME"
+	cp .zshrc "$HOME"
+	cp -R .moc/ "$HOME"
 
-	tmux source $HOME/.tmux.conf >/dev/null 2>&1
+	tmux source "$HOME/.tmux.conf" >/dev/null 2>&1
 
 fi
 
-if [ "$1" == "--nix" ]
+if [ "$1" = "--nix" ]
 then
 	if [ "$(whoami)" != "root" ]
 	then
@@ -31,4 +33,4 @@ then
 	nixos-rebuild switch
 fi
 
-cd "$initial_dir"
+cd "$initial_dir" || exit 1

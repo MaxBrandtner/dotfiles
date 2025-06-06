@@ -1,9 +1,3 @@
-# mocp-themes
-
-link: https://github.com/wimstefan/mocp-themes 
-
-(no license)
-
 # zsh-theme
 
 link: https://github.com/dikiapp/dotfiles
@@ -16,8 +10,8 @@ link: https://github.com/rhysd/vim-clang-format
 
 (no license)
 
-# vim-theme
+# neovim kickstart
 
-link: https://github.com/vim/colorschemes
+link: https://github.com/nvim-lua/kickstart.nvim
 
-license: vim-license
+license: MIT

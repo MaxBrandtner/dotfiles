@@ -73,6 +73,7 @@ vim.g.lazygit_floating_window_scaling_factor = 0.95
 
 -- abbreviations
 vim.cmd(':autocmd FileType c :iabbrev <buffer> pr@ pr_info("%s:\\n", __func__);<Esc>F\\i')
+vim.cmd(':autocmd BufNewFile,BufRead */gcc/config/*/*.md set filetype=lisp')
 vim.cmd('iabbrev sn@ -- snip --<Esc>F\\i')
 vim.cmd('iabbrev thx@ Thanks,<CR>Julian<Esc>F\\i')
 

@@ -9,6 +9,7 @@ require('plugins')
 require('keymaps')
 require('lsp')
 require('options')
+require('filetypes')
 
 vim.cmd.colorscheme "catppuccin-mocha"
 vim.api.nvim_set_hl(0, "Normal", {bg = "none", ctermbg = "none"})
@@ -53,6 +54,12 @@ require('gitsigns').setup()
 
 -- fast motions
 require('leap').setup({})
+
+require('cmp').setup({
+    completion = {
+	autocomplete = false
+    }
+})
 
 -- vimtex
 -- vim.g.vimtex_view_general_viewer = 'okular'

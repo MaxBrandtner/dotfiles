@@ -25,4 +25,5 @@ vim.api.nvim_create_autocmd("FileType", {
 		vim.opt_local.shiftwdith = 4
 		vim.opt_local.linebreak = true
 		vim.opt_local.tabstop = 4
+	end,
 })

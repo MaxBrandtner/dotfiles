@@ -17,3 +17,12 @@ vim.api.nvim_create_autocmd({"BufRead", "BufNewFile"}, {
 	vim.opt_lcoal.softtabstop = 0
     end,
 })
+
+vim.api.nvim_create_autocmd("FileType", {
+	pattern = {"markdown"},
+	callback = function()
+		vim.opt_local.expandtab = true
+		vim.opt_local.shiftwdith = 4
+		vim.opt_local.linebreak = true
+		vim.opt_local.tabstop = 4
+})

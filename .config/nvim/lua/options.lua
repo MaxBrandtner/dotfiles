@@ -23,6 +23,7 @@ vim.o.mouse = "nv"
 vim.o.number = true
 vim.o.pumheight = 10
 vim.o.relativenumber = true
+vim.o.scrolloff = 8
 vim.o.shiftround = true
 vim.o.shiftwidth = 8
 vim.o.showmode = false

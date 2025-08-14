@@ -35,6 +35,7 @@ vim.o.termguicolors = true
 vim.o.undofile = true
 vim.o.undolevels = 10000
 vim.o.updatetime = 200
+vim.o.wrap = false
 
 vim.g.mapleader = " "
 

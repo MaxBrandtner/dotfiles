@@ -75,4 +75,7 @@ cmp.setup {
 	sources = {
 		{ name = 'nvim_lsp' },
 	},
+	completion = {
+		autocomplete = false
+	},
 }

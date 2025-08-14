@@ -55,12 +55,6 @@ require('gitsigns').setup()
 -- fast motions
 require('leap').setup({})
 
-require('cmp').setup({
-    completion = {
-	autocomplete = false
-    }
-})
-
 -- vimtex
 -- vim.g.vimtex_view_general_viewer = 'okular'
 -- vim.g.vimtex_compiler_latexmk = {
@@ -79,10 +73,7 @@ vim.g.lazygit_floating_window_scaling_factor = 0.95
 -- vim.cmd("let g:hardtime_default_on = 1")
 
 -- abbreviations
-vim.cmd(':autocmd FileType c :iabbrev <buffer> pr@ pr_info("%s:\\n", __func__);<Esc>F\\i')
 vim.cmd(':autocmd BufNewFile,BufRead */gcc/config/*/*.md set filetype=lisp')
-vim.cmd('iabbrev sn@ -- snip --<Esc>F\\i')
-vim.cmd('iabbrev thx@ Thanks,<CR>Julian<Esc>F\\i')
 
 -- Set Terminal automatically to insert mode
 -- and hide line numbers in terminal mode

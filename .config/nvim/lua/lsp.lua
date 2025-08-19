@@ -10,6 +10,7 @@ local servers = {
 	{ name = 'pyright',       executable = 'pyright' },
 	{ name = 'lua_ls',        executable = 'lua-language-server' },
 	{ name = 'bashls',        executable = 'bash-language-server' },
+	{ name = 'ltex',          executable = 'ltex-ls'},
 }
 
 -- only set up LSP if it exists in $PATH
@@ -30,6 +31,20 @@ for _, server in ipairs(servers) do
 			lspconfig[server.name].setup {
 				capabilities = capabilities,
 				filetypes = { "sh", "bash", "zsh" },
+			}
+		elseif server.name == "ltex" then
+			lspconfig[server.name].setup {
+				capabilities = capabilities,
+				settings = {
+					ltex = {
+						language = "en-US",
+						enabled = {"latex", "tex", "bib"},
+						checkFrequency = "save",
+						dictonary = {
+							["en-US"] = {"./spelling.txt"}
+						}
+					}
+				}
 			}
 		else
 			lspconfig[server.name].setup {

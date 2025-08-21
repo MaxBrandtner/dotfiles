@@ -40,7 +40,7 @@ for _, server in ipairs(servers) do
 						language = "en-US",
 						enabled = {"latex", "tex", "bib"},
 						checkFrequency = "save",
-						dictonary = {
+						dictionary = {
 							["en-US"] = {"./spelling.txt"}
 						}
 					}

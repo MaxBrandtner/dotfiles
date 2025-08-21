@@ -39,13 +39,13 @@ for _, server in ipairs(servers) do
 				settings = {
 					ltex = {
 						language = "en-US",
-						enabled = {"latex", "tex", "bib"},
+						enabled = {"tex", "bib"},
 						checkFrequency = "save",
 						dictionary = {
 							["en-US"] = {"./spelling.txt"}
 						}
 					}
-				}
+				},
 			}
 		else
 			lspconfig[server.name].setup {

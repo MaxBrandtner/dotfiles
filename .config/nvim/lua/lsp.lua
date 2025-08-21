@@ -35,6 +35,7 @@ for _, server in ipairs(servers) do
 		elseif server.name == "ltex" then
 			lspconfig[server.name].setup {
 				capabilities = capabilities,
+				filetypes = { "tex", "bib" },
 				settings = {
 					ltex = {
 						language = "en-US",

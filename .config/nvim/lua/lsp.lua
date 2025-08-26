@@ -39,7 +39,7 @@ for _, server in ipairs(servers) do
 				settings = {
 					ltex = {
 						language = "en-US",
-						enabled = {"tex", "bib"},
+						enabled = {"latex", "tex", "bib"},
 						checkFrequency = "save",
 						dictionary = {
 							["en-US"] = {"./spelling.txt"}

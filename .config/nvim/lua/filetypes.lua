@@ -49,7 +49,7 @@ vim.api.nvim_create_autocmd("FileType", {
 })
 
 vim.api.nvim_create_autocmd("FileType", {
-	pattern = {"html", "htmldjango", "xml"},
+	pattern = {"html", "htmldjango", "xml", "svg"},
 	callback = function()
 		vim.opt_local.expandtab = true
 		vim.opt_local.shiftwidth = 2
